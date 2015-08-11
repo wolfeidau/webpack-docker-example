@@ -13,7 +13,8 @@ docker build -t iojsfsnotify .
 Then start the docker container, note the `PROJECT_PATH` is passing in the current working directory and the volume `/Users`.
 
 ```
-docker run -it -e PROJECT_PATH=$(pwd) -v "/Users:/Users" -p 8080:8080 -t iojsfsnotify
+docker run -it -e PROJECT_PATH=$(pwd) -e DOCKER_IP=$(boot2docker ip) \
+  -v "/Users:/Users" -p 8080:8080 -t iojsfsnotify
 ```
 
 Install your npm modules.
@@ -27,4 +28,3 @@ Start the `webpack-dev-server`.
 ```
 npm start
 ```
-
