@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #e1e1e1;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.App {
+  width: 600px;
+  color: #a8a9b7;
+  /* flexbox setup */
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
